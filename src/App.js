@@ -1,10 +1,30 @@
-import { useRoutes } from "react-router-dom";
+import { useRoutes, useLocation } from "react-router-dom";
+import { CSSTransition, TransitionGroup } from "react-transition-group";
+
 import Navbar from "./components/Navbar";
 import Footer from "./components/Footer";
 import routes from "./routes";
 
 export default function App() {
   const element = useRoutes(routes);
+  const location = useLocation();
+
+  const getAnimation = (pathname) => {
+    switch (pathname) {
+      case "/about":
+        return "page-right";
+      case "/contact":
+        return "page-left";
+      case "/gallery":
+        return "page-zoom";
+      case "/register":
+        return "page-rotate";
+      case "/favorites":
+        return "page-flip";
+      default:
+        return "page";
+    }
+  };
 
   return (
     <>
@@ -29,7 +49,16 @@ export default function App() {
               paddingBottom: "20px",
             }}
           >
-            {element}
+            <TransitionGroup component={null}>
+              <CSSTransition
+                key={location.pathname}
+                timeout={800}
+                classNames={getAnimation(location.pathname)}
+                unmountOnExit
+              >
+                {element}
+              </CSSTransition>
+            </TransitionGroup>
           </div>
         </main>
         <Footer />

@@ -1,13 +1,12 @@
-/* src/styles/HomeBegin.css */
 :root{
   --bg: #f6fbff;
   --card-bg: #ffffff;
-  --text: #0f172a;          /* slate-900 */
-  --muted: #475569;         /* slate-600 */
-  --ring: #e2e8f0;          /* slate-200 */
-  --brand1: #6366f1;        /* indigo-500 */
-  --brand2: #3b82f6;        /* blue-500 */
-  --brand3: #22c55e;        /* green-500 */
+  --text: #0f172a;       
+  --muted: #475569;   
+  --ring: #e2e8f0;      
+  --brand1: #6366f1;       
+  --brand2: #3b82f6;   
+  --brand3: #22c55e;   
 }
 
 .home-begin{

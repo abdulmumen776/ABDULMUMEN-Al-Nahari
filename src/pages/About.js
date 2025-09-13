@@ -2,7 +2,6 @@ import React, { useEffect, useMemo, useState } from "react";
 import "../styles/about.css";
 import Kalendr from "./kalendr.js";
 
-// ✅ البيانات الثابتة للجامعة — بدون الحاجة لـ about.json
 const COLLEGE_DATA = {
   name: "Malmö University",
   location: "Malmö, Sweden",
