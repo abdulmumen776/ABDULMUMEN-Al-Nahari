@@ -1,20 +1,24 @@
- import React, { useState, useEffect } from 'react';
-import { FaFacebookF, FaWhatsapp, FaInstagram } from 'react-icons/fa';  
-import '../styles/Footer.css';
+import React, { useState, useEffect } from "react";
+import { FaFacebookF, FaWhatsapp, FaInstagram } from "react-icons/fa";
+import "../styles/Footer.css";
 
 const Footer = () => {
   const [developers, setDevelopers] = useState([]);
 
-   useEffect(() => {
+  useEffect(() => {
     const fetchDevelopers = async () => {
       try {
-        const response = await fetch('/data/coordinators.json');
+        const response = await fetch("/data/coordinators.json");
         const data = await response.json();
         setDevelopers(Array.isArray(data) ? data : []);
       } catch (error) {
         console.error("Failed to load developers data:", error);
-         setDevelopers([
-          { id: 1, name: "Towheeb algafri", email: "towheebalgafri@gmail.com" },
+        setDevelopers([
+          {
+            id: 1,
+            name: "ABDULMUMEN ALNAHARI",
+            email: "abdulmumen776@gmail.com",
+          },
         ]);
       }
     };
@@ -23,16 +27,28 @@ const Footer = () => {
   }, []);
 
   const socialLinks = [
-    { name: 'Facebook', url: 'https://www.facebook.com', icon: <FaFacebookF className="fs-5" /> },
-    { name: 'WhatsApp', url: 'https://wa.me/', icon: <FaWhatsapp className="fs-5" /> },
-    { name: 'Instagram', url: 'https://www.instagram.com', icon: <FaInstagram className="fs-5" /> },
+    {
+      name: "Facebook",
+      url: "https://www.facebook.com",
+      icon: <FaFacebookF className="fs-5" />,
+    },
+    {
+      name: "WhatsApp",
+      url: "https://wa.me/",
+      icon: <FaWhatsapp className="fs-5" />,
+    },
+    {
+      name: "Instagram",
+      url: "https://www.instagram.com",
+      icon: <FaInstagram className="fs-5" />,
+    },
   ];
 
   return (
     <footer className="bg-dark text-light w-100 mt-auto">
       <div className="container py-4">
         <div className="row gy-4 align-items-start">
-           <div className="col-12 col-md-6">
+          <div className="col-12 col-md-6">
             <h4 className="h6 text-uppercase fw-semibold mb-3">Developed by</h4>
             {developers.length > 0 ? (
               <ul className="list-group list-group-flush">
@@ -57,8 +73,10 @@ const Footer = () => {
             )}
           </div>
 
-           <div className="col-12 col-md-6">
-            <h4 className="h6 text-uppercase fw-semibold mb-3">Connect with us</h4>
+          <div className="col-12 col-md-6">
+            <h4 className="h6 text-uppercase fw-semibold mb-3">
+              Connect with us
+            </h4>
             <div className="d-flex flex-wrap gap-2">
               {socialLinks.map((social, index) => (
                 <a
@@ -77,8 +95,6 @@ const Footer = () => {
             </div>
           </div>
         </div>
-
-        
       </div>
     </footer>
   );

@@ -1,35 +1,19 @@
  [
-  {
+    {
     "id": 1,
+    "name": "ABDULMUMEN ALNAHARI",
+    "title": "Cultural Activities Coordinator",
+    "department": "Arts & Humanities",
+    "phone": "+967 776 423 587",
+    "email": "abdulmumen776@gmail.com"
+
+  },
+  {
+    "id": 2,
     "name": "Towheeb Algafari",
     "title": "Dean",
     "department": "College of Engineering & Technology",
     "phone": "+967 778016636",
     "email": "towheebalgafri@gmail.com"
-  },
-   {
-    "id": 2,
-    "name": "Bashar Arife",
-    "title": "Student Coordinator",
-    "department": "Student Council",
-    "phone": "+967 779512874",
-    "email": "ahmed.student@sfcet.edu"
-  },
-  {
-    "id": 3,
-    "name": "Anas Ahmed Mohammed",
-    "title": "Faculty Event Coordinator",
-    "department": "Student Affairs",
-    "phone": "+967 771644308",
-    "email": "anasahmedmohammedkasem@gmail.com"
-  },
-  {
-    "id": 4,
-    "name": "ABDULMUMEN ALNAHARI",
-    "title": "Cultural Activities Coordinator",
-    "department": "Arts & Humanities",
-    "phone": "+967 776 423 587",
-    "email": "alnhari776@gmail.com"
-
   }
 ]
